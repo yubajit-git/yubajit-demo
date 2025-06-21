@@ -4,12 +4,13 @@ on:
     branches:
         -main
 jobs:
-    deploy:
-      runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-      steps: 
-        -name: Checkout code
-        -uses: actions/checkout@v4
+  steps: 
+    -name: Checkout code
+    -uses: actions/checkout@v4
 
-        -name: Show all files
-        -run: ls -al
+    -name: Show all files
+    -run: ls -al
+   

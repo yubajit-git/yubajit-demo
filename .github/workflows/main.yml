@@ -23,3 +23,13 @@ jobs:
       - name: Show all files
 
         run: ls -al
+      - name: Doing SSH to EC2
+        uses: appleboy/ssh-action@v1
+          with:
+            host: ${{secrets.EC2_HOST}}
+            username: ${{secrets.EC2_USERNAME}}
+            Key: ${{secrets.EC2_SSH}}
+            port: 22
+            script: |
+              whoami
+              mkdir yubajit
